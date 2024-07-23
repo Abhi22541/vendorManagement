@@ -1,0 +1,20 @@
+# Django-related
+db.sqlite3
+/static/
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# Env files
+.env
+venv/
+env/
+
+# Migration files
+**/migrations/*
+!**/migrations/__init__.py
+
+# VS Code
+.vscode/

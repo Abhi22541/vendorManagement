@@ -1,0 +1,341 @@
+{
+    "info": {
+        "name": "Vendor and Purchase Order API",
+        "description": "Collection of API endpoints for managing vendors and purchase orders.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Vendor Endpoints",
+            "item": [
+                {
+                    "name": "Create Vendor",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\": \"Vendor Name\", \"contact_details\": \"Contact Details\", \"address\": \"Vendor Address\", \"vendor_code\": \"Unique Vendor Code\"}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/vendors/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "vendors"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "List Vendors",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/vendors/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "vendors"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Retrieve Vendor",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/vendors/:vendor_id/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "vendors",
+                                ":vendor_id"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Vendor",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\": \"Updated Vendor Name\", \"contact_details\": \"Updated Contact Details\", \"address\": \"Updated Address\", \"vendor_code\": \"Updated Vendor Code\"}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/vendors/:vendor_id/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "vendors",
+                                ":vendor_id"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Vendor",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/vendors/:vendor_id/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "vendors",
+                                ":vendor_id"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Vendor Performance Metrics",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/vendors/:vendor_id/performance/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "vendors",
+                                ":vendor_id",
+                                "performance"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Purchase Order Endpoints",
+            "item": [
+                {
+                    "name": "Create Purchase Order",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"po_number\": \"PO123\", \"vendor\": 1, \"order_date\": \"YYYY-MM-DDTHH:MM:SSZ\", \"delivery_date\": \"YYYY-MM-DDTHH:MM:SSZ\", \"items\": {\"item1\": 10}, \"quantity\": 10, \"status\": \"pending\", \"quality_rating\": 4.5, \"issue_date\": \"YYYY-MM-DDTHH:MM:SSZ\", \"acknowledgment_date\": \"YYYY-MM-DDTHH:MM:SSZ\"}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/purchase_orders/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "purchase_orders"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "List Purchase Orders",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/purchase_orders/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "purchase_orders"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Retrieve Purchase Order",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/purchase_orders/:po_id/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "purchase_orders",
+                                ":po_id"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Purchase Order",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"po_number\": \"PO123\", \"vendor\": 1, \"order_date\": \"YYYY-MM-DDTHH:MM:SSZ\", \"delivery_date\": \"YYYY-MM-DDTHH:MM:SSZ\", \"items\": {\"item1\": 10}, \"quantity\": 10, \"status\": \"completed\", \"quality_rating\": 4.5, \"issue_date\": \"YYYY-MM-DDTHH:MM:SSZ\", \"acknowledgment_date\": \"YYYY-MM-DDTHH:MM:SSZ\"}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/purchase_orders/:po_id/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "purchase_orders",
+                                ":po_id"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Purchase Order",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/purchase_orders/:po_id/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "purchase_orders",
+                                ":po_id"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Acknowledge Purchase Order",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/purchase_orders/:po_id/acknowledge/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "purchase_orders",
+                                ":po_id",
+                                "acknowledge"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}
